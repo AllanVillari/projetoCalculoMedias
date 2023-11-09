@@ -37,14 +37,14 @@ const inputNotaAtividade = document.getElementById('nota-atividade');
 
 
 
-if(atividades.includes( `${inputNomeAtividade.value}`.replace(/\s/g, '') ) ) {
+if(atividades.includes( `${(inputNomeAtividade.value).toLowerCase()}`.replace(/\s/g, '') ) ) {
 
     alert(`A atividade: ${inputNomeAtividade.value} já foi adicionada`)
 
  } else{
     
 
-    atividades.push((inputNomeAtividade.value).replace(/\s/g, ''));
+    atividades.push( ((inputNomeAtividade.value).toLowerCase()).replace(/\s/g, '') );
     notas.push(parseFloat(inputNotaAtividade.value));
 
     let linha = '<tr>';
